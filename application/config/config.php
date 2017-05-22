@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '192.168.124.10/~user/public_html/MonkeyWeb/WebAdvanced_MonkeyBuisness/';
+$config['base_url'] = 'http://192.168.124.123/~user/WebAdvanced/';
 
 /*
 |--------------------------------------------------------------------------

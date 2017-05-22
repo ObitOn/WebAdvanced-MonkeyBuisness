@@ -22,7 +22,7 @@ if($this->session->userdata('logged_in')) : ?>
     <!--Start Form-->
     <?php $attributes = array('id' => 'login_form',
         'class' => 'form-horizontal'); ?>
-    <?php echo form_open('pages/login',$attributes); ?>
+    <?php echo form_open('Users',$attributes); ?>
 
     <!--Field: Username-->
     <p>

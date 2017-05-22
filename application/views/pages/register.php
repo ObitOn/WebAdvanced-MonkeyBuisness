@@ -10,7 +10,8 @@
 <p>Please fill out the form below to create an account</p>
 <!--Display Errors-->
 <?php echo validation_errors('<p class="text-error">'); ?>
-<?php echo form_open('pages/register'); ?>
+
+<?php echo form_open('users/register'); ?>
     <!--Field: First Name-->
     <p>
         <?php echo form_label('First Name:'); ?>
@@ -89,4 +90,4 @@
     <p>
         <?php echo form_submit($data); ?>
     </p>
-<?php echo form_close(); ?>
+<?php echo form_close();

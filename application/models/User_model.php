@@ -18,11 +18,11 @@ class User_model extends CI_Model{
         $enc_password = md5($this->input->post('password'));
         $data = array
         (
-            'FirstName'    => $this->input->post('first_name'),
-            'LastName'     => $this->input->post('last_name'),
-            'UserName'     => $this->input->post('user_name'),
-            'E-Mail'       => $this->input->post('email'),
-            'Password'     => $enc_password
+            'first_name'    => $this->input->post('first_name'),
+            'last_name'     => $this->input->post('last_name'),
+            'email'       => $this->input->post('email'),
+            'username'     => $this->input->post('user_name'),
+            'password'     => $enc_password
         );
         $insert = $this->db->insert('Client',$data);
         return $insert;
@@ -32,8 +32,8 @@ class User_model extends CI_Model{
     public function login_user($username,$password)
     {
         $enc_password = md5($password);
-        $this->db->where('UserName', $username);
-        $this->db->where('Password', $enc_password);
+        $this->db->where('username', $username);
+        $this->db->where('password', $enc_password);
 
         $result = $this->db->get('Client');
         if($result->num_rows == 1)

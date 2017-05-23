@@ -16,7 +16,7 @@ if($this->session->userdata('logged_in')) : ?>
     <!--Start Form-->
     <?php $attributes = array('id' => 'login_form',
         'class' => 'form-horizontal'); ?>
-    <?php echo form_open('users',$attributes); ?>
+    <?php echo form_open('users/login',$attributes); ?>
 
     <!--Field: Username-->
     <p>

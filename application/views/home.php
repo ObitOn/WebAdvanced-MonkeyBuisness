@@ -8,6 +8,9 @@
 <?php if($this->session->flashdata('need_login')) : ?>
     <?php echo '<p class="text-error">' .$this->session->flashdata('need_login') . '</p>'; ?>
 <?php endif; ?>
+<?php if($this->session->flashdata('logged_in')) : ?>
+    <?php echo '<p class="text-error">' .$this->session->flashdata('logged_in') . '</p>'; ?>
+<?php endif; ?>
 
 <h1>Welcome to Monkey Business!</h1>
 <p>Monkey Business is a business to do monkey stuff.</p>

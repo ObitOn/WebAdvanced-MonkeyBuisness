@@ -13,7 +13,7 @@
         </div>
         <div id="navbar">
             <ul class="nav navbar-nav">
-                <li><a href="<?php echo base_url(); ?>templates/layout">Home</a></li>
+                <li><a href="<?php echo base_url(); ?>home">Home</a></li>
                 <li><a href="<?php echo base_url(); ?>pages/login">Login</a></li>
                 <?php if($this->session->userdata('logged_in')) : ?>
                 Welcome,  <?php echo $this->session->userdata('username'); ?>

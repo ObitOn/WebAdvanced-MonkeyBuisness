@@ -1,5 +1,5 @@
+<h4>List Actions</h4>
 <ul id="actions">
-    <h4>List Actions</h4>
     <li> <a href="<?php echo base_url(); ?>events/edit/<?php echo $event->id; ?>">Edit Event</a></li>
     <li> <a onclick="return confirm('Are you sure?')" href="<?php echo base_url(); ?>event/delete/<?php echo $event->id; ?>">Delete Event</a></li>
 </ul>

@@ -12,8 +12,8 @@
 <ul class="list_items">
     <?php foreach ($events as $event) : ?>
         <li>
-            <div class="list_name"><a href="<?php echo base_url(); ?>lists/show/<?php echo $event->id; ?>"><?php echo $event->list_name; ?></a></div>
-            <div class="list_body"><?php echo $event->event_body; ?></div>
+            <div class="event_name"><a href="<?php echo base_url(); ?>events/show/<?php echo $event->id; ?>"><?php echo $event->event_name; ?></a></div>
+            <div class="event_body"><?php echo $event->event_body; ?></div>
         </li>
     <?php endforeach; ?>
 </ul>

@@ -6,7 +6,7 @@
  * Time: 0:40
  */
 if($this->session->userdata('logged_in')) : ?>
-    <p>You are logged in as <?php echo $this->session->userdata('UserName'); ?></p>
+    <p>You are logged in as <?php echo $this->session->userdata('username'); ?></p>
     <!--Start Form-->
     <?php $attributes = array('id' => 'logout_form',
         'class' => 'form-horizontal'); ?>

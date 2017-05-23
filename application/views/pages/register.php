@@ -1,11 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: LesuisseJens
- * Date: 17/05/2017
- * Time: 0:40
- */
-?>
 <h1>Register</h1>
 <p>Please fill out the form below to create an account</p>
 <!--Display Errors-->

@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Monkey Busines</title>
+    <link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.min.css">
 </head>
 <body>
@@ -12,10 +13,10 @@
         </div>
         <div id="navbar">
             <ul class="nav navbar-nav">
-                <li><a href="<?php echo base_url(); ?>">Home</a></li>
-                <li><a href="/login">Login</a></li>
+                <li><a href="<?php echo base_url(); ?>templates/layout">Home</a></li>
+                <li><a href="<?php echo base_url(); ?>pages/login">Login</a></li>
                 <?php if($this->session->userdata('logged_in')) : ?>
-                Welcome,  <?php echo $this->session->userdata('UserName'); ?>
+                Welcome,  <?php echo $this->session->userdata('username'); ?>
                 <?php else : ?>
                 <a href="pages/register">Register</a>
                 <?php endif; ?>
@@ -24,15 +25,13 @@
         </div>
     </div>
 </nav>
-
-
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span3">
             <div class="well sidebar-nav">
                 <div style="margin:0 0 10px 10px;">
                     <!--SIDEBAR CONTENT-->
-                    <?php $this->load->view('pages/register'); ?>
+                    <?php $this->load->view('pages/login'); ?>
                 </div>
             </div><!--/.well -->
         </div><!--/span-->
@@ -45,7 +44,7 @@
     <hr>
 
     <footer>
-        <p>&copy; Copyright 2013</p>
+        <p>&copy; Copyright 2017</p>
     </footer>
 </div><!--/.fluid-container-->
 </body>

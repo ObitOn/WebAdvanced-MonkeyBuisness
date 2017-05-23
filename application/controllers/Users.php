@@ -34,13 +34,13 @@ class Users extends CI_Controller{
     }
 
     public function login(){
-        $this->form_validation->set_rules('userName','Username','trim|required|min_length[4]|xss_clean');
-        $this->form_validation->set_rules('password','Password','trim|required|min_length[4]|max_length[50]|xss_clean');
+        $this->form_validation->set_rules('username','Username','trim|required|min_length[4]');
+        $this->form_validation->set_rules('password','Password','trim|required|min_length[4]|max_length[50]');
 
         if($this->form_validation->run() == FALSE){
             //Set error
             $this->session->set_flashdata('login_failed', 'Sorry, the login info that you entered is invalid');
-            redirect('pages/home');
+            redirect('templates/layout');
         } else {
             //Get from post
             $username = $this->input->post('username');

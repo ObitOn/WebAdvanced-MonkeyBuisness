@@ -12,7 +12,7 @@ class Events extends CI_Controller {
         if(!$this->session->userdata('logged_in')){
             //Set error
             $this->session->set_flashdata('need_login', 'Sorry, you need to be logged in to view that area');
-            redirect('home/index');
+            redirect('pages/index');
         }
     }
 

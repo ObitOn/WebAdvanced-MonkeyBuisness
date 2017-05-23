@@ -20,7 +20,6 @@
                 <?php else : ?>
                     <li><a href="<?php echo base_url(); ?>pages/register">Register</a></li>
                 <?php endif; ?>
-                <li><a href="<?php echo base_url(); ?>pages/about">About</a></li>
             </ul>
         </div>
     </div>

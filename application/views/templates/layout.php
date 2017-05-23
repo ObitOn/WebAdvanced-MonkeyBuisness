@@ -9,18 +9,17 @@
 <nav class="navbar navbar-inverse">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/">monkey_busines</a>
+            <a class="navbar-brand" href="<?php echo base_url(); ?>templates/layout">Monkey Business</a>
         </div>
         <div id="navbar">
             <ul class="nav navbar-nav">
-                <li><a href="<?php echo base_url(); ?>templates/layout">Home</a></li>
+                <li><a href="<?php echo base_url(); ?>home">Home</a></li>
                 <li><a href="<?php echo base_url(); ?>pages/login">Login</a></li>
                 <?php if($this->session->userdata('logged_in')) : ?>
                 Welcome,  <?php echo $this->session->userdata('username'); ?>
                 <?php else : ?>
-                <a href="pages/register">Register</a>
+                    <li><a href="<?php echo base_url(); ?>pages/register">Register</a></li>
                 <?php endif; ?>
-                <li><a href="/about">About</a></li>
             </ul>
         </div>
     </div>

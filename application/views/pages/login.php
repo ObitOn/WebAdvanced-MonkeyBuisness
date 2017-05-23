@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: LesuisseJens
- * Date: 17/05/2017
- * Time: 0:40
- */
 if($this->session->userdata('logged_in')) : ?>
     <p>You are logged in as <?php echo $this->session->userdata('username'); ?></p>
     <!--Start Form-->
@@ -22,7 +16,7 @@ if($this->session->userdata('logged_in')) : ?>
     <!--Start Form-->
     <?php $attributes = array('id' => 'login_form',
         'class' => 'form-horizontal'); ?>
-    <?php echo form_open('Users',$attributes); ?>
+    <?php echo form_open('users/login',$attributes); ?>
 
     <!--Field: Username-->
     <p>

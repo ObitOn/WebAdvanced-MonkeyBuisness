@@ -29,17 +29,12 @@ USE `Monkey_Business`;
 --
 
 CREATE TABLE `Client` (
-  `ID` int(11) NOT NULL,
-  `FirstName` varchar(50) NOT NULL,
-  `LastName` varchar(50) NOT NULL,
-  `PostalCode` int(11) NOT NULL,
-  `City` varchar(20) NOT NULL,
-  `Street` varchar(30) NOT NULL,
-  `HouseNumber` int(11) NOT NULL,
-  `PhoneNumber` int(11) NOT NULL,
-  `MobilePhoneNumber` int(11) NOT NULL,
-  `Email` varchar(50) NOT NULL,
-  `Project` int(11) NOT NULL
+  `id` int(11) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

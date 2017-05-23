@@ -28,7 +28,7 @@ class Users extends CI_Controller{
             if($this->User_model->create_member()){
                 $this->session->set_flashdata('registered', 'You are now registered, please log in');
                 //Redirect to index page with error above
-                redirect('templates/layout');
+                redirect('home/index');
             }
         }
     }
@@ -40,7 +40,7 @@ class Users extends CI_Controller{
         if($this->form_validation->run() == FALSE){
             //Set error
             $this->session->set_flashdata('login_failed', 'Sorry, the login info that you entered is invalid');
-            redirect('templates/layout');
+            redirect('home/index');
         } else {
             //Get from post
             $username = $this->input->post('username');
@@ -60,11 +60,11 @@ class Users extends CI_Controller{
                 //Set session userdata
                 $this->session->set_userdata($user_data);
 
-                redirect('templates/layout');
+                redirect('home/index');
             } else {
                 //Set error
                 $this->session->set_flashdata('login_failed', 'Sorry, the login info that you entered is invalid');
-                redirect('templates/layout');
+                redirect('home/index');
             }
         }
     }

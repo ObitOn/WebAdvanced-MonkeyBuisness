@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: LesuisseJens
- * Date: 17/05/2017
- * Time: 0:40
- */
 if($this->session->userdata('logged_in')) : ?>
     <p>You are logged in as <?php echo $this->session->userdata('username'); ?></p>
     <!--Start Form-->

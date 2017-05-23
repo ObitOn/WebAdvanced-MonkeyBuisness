@@ -76,39 +76,39 @@ class Events extends CI_Controller {
     }
 
 
-    public function edit($list_id){
-        $this->form_validation->set_rules('list_name','List Name','trim|required|xss_clean');
-        $this->form_validation->set_rules('list_body','List Body','trim|xss_clean');
+    public function edit($event_id){
+        $this->form_validation->set_rules('event_name','Event Name','trim|required');
+        $this->form_validation->set_rules('event_body','Event Body','trim');
 
         if($this->form_validation->run() == FALSE){
             //Get the current list info
-            $data['this_list'] = $this->List_model->get_list_data($list_id);
+            $data['this_event'] = $this->Event_model->get_event_data($event_id);
             //Load view and layout
-            $data['main_content'] = 'lists/edit_list';
-            $this->load->view('layouts/main',$data);
+            $data['main_content'] = 'events/edit_event';
+            $this->load->view('templates/layout',$data);
         } else {
             //Validation has ran and passed
             //Post values to array
             $data = array(
-                'list_name'    => $this->input->post('list_name'),
-                'list_body'    => $this->input->post('list_body'),
-                'list_user_id' => $this->session->userdata('user_id')
+                'event_name'    => $this->input->post('event_name'),
+                'event_body'    => $this->input->post('event_body'),
+                'event_user_id' => $this->session->userdata('user_id')
             );
-            if($this->List_model->edit_list($list_id,$data)){
-                $this->session->set_flashdata('list_updated', 'Your task list has been updated');
+            if($this->Event_model->edit_event($event_id,$data)){
+                $this->session->set_flashdata('event_updated', 'Your event has been updated');
                 //Redirect to index page with error above
-                redirect('lists/index');
+                redirect('events/index');
             }
         }
     }
 
 
-    public function delete($list_id){
+    public function delete($event_id){
         //Delete list
-        $this->List_model->delete_list($list_id);
+        $this->Event_model->delete_event($event_id);
         //Create Message
-        $this->session->set_flashdata('list_deleted', 'Your list has been deleted');
+        $this->session->set_flashdata('event_deleted', 'Your event has been deleted');
         //Redirect to list index
-        redirect('lists/index');
+        redirect('events/index');
     }
 }

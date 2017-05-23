@@ -30,7 +30,7 @@
             <div class="well sidebar-nav">
                 <div style="margin:0 0 10px 10px;">
                     <!--SIDEBAR CONTENT-->
-                    <?php $this->load->view('pages/login'); ?>
+                    <?php $this->load->view('pages/register'); ?>
                 </div>
             </div><!--/.well -->
         </div><!--/span-->
